@@ -1,0 +1,31 @@
+﻿# Komut satırını kullanarak mevcut bir projeyi GitHub'a ekleme
+
+Mevcut projeyi Github'a eklemek için basit adımlar.
+
+1. GitHub'da yeni bir havuz oluşturun.
+Terminal'de, geçerli çalışma dizinini yerel projenize değiştirin.
+
+## 2. Yerel dizini Git deposu olarak başlatın.
+
+git init
+Dosyaları yeni yerel deponuza ekleyin. Bu onları ilk taahhüt için aşamalandırır.
+
+git add .
+veya:
+
+git add --all
+Yerel deponuzda hazırladığınız dosyaları teslim edin.
+
+git commit -m 'First commit'
+Uzak depo URL alanını GitHub veri havuzunuzdan kopyalayın, sağ kenar çubuğunda uzak depo URL'sini kopyalayın.
+
+Terminal'de, yerel deponuzun gönderileceği uzak deponun URL'sini ekleyin.
+
+git remote add origin <remote repository URL>
+Yeni uzaktan kumandayı ayarlar:
+
+git remote -v
+Yerel deponuzdaki değişiklikleri GitHub'a aktarın.
+
+git push origin master
+Yerel deponuzdaki değişiklikleri, başlangıç ​​noktası olarak belirttiğiniz uzak depoya kadar iter
