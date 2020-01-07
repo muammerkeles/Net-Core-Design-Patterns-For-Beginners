@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ModelConcept\ModelConcept.csproj" />
     <ProjectReference Include="..\Singleton.Design.Pattern\Singleton.Design.Pattern.csproj" />
+    <ProjectReference Include="..\SuperClass\SuperClass.csproj" />
   </ItemGroup>
 
 </Project>

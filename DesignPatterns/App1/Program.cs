@@ -1,6 +1,7 @@
-﻿using Singleton.Design.Pattern;
-using Singleton.Design.Pattern.Sample.Person;
-using Singleton.Design.Pattern.Sample.Person.Interface;
+﻿using ModelConcept.Sample.Person;
+using ModelConcept.Sample.Person.Interface;
+using Singleton.Design.Pattern;
+ 
 using Singleton.Design.Pattern.Sample.Static;
 using System;
 
