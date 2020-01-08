@@ -16,9 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Application
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App1", "App1\App1.csproj", "{875B1AF9-618A-499E-BB81-865938BC31B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperClass", "SuperClass\SuperClass.csproj", "{5661F47B-A82C-475A-85F1-3F16AD458C75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Super.Sub.Classes", "SuperClass\Super.Sub.Classes.csproj", "{5661F47B-A82C-475A-85F1-3F16AD458C75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelConcept", "ModelConcept\ModelConcept.csproj", "{AC5E9D57-A329-4A5E-ADE1-FB225728ACC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelConcept", "ModelConcept\ModelConcept.csproj", "{AC5E9D57-A329-4A5E-ADE1-FB225728ACC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
