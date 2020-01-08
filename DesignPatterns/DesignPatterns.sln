@@ -20,6 +20,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Super.Sub.Classes", "SuperC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelConcept", "ModelConcept\ModelConcept.csproj", "{AC5E9D57-A329-4A5E-ADE1-FB225728ACC3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Terimler", "_Terimler", "{E8D9C41E-CE77-40EB-9265-F7AE394F6440}"
+	ProjectSection(SolutionItems) = preProject
+		Terimler.cs = Terimler.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
