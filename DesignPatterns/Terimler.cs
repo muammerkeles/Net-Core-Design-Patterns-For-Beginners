@@ -9,6 +9,7 @@ public class Terimler {
 
     //#####  public, private, protected, internal gibi terimler "Modifier" veya "Access Modifiers" diye çağrılırlar.  Türkçesi "Erişim Belirleyiciler"
     /*
+     * 
     "Private"  : Sadece kendi kod bloğu içerisinden çağrılabilir. 
     "Public"   : Hem kendi kod bloğu üzerinden hem de dışarıdan hatta farklı projeler üzerinden de çağırılabilir.
     "Internal" : Kendi projesi içerisinde erişilebilir ancak farklı bir projeden erişilemez.Aksi belirtilmedikçe bütün classlar default olarak "Interval"dir. 
