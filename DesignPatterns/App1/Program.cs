@@ -10,7 +10,9 @@ namespace App1 {
     class Program {
         static void Main(string[] args)
         {
+            #region ProgramVariants
             string[] qsn = {
+                "Programdan Çık",
                 "Sigleton Design Pattern",
                 "Concept Model",
                 "Supper Class",
@@ -20,17 +22,26 @@ namespace App1 {
             {
                 Console.WriteLine("{0} : {1} örneği", i-1, qsn[i-1]);
             }
+            step1:
             string chosen=Console.ReadLine();
             double selectedId;
-            double.TryParse(chosen,out selectedId);
+            bool girilenDeger=double.TryParse(chosen,out selectedId);
+            if (!girilenDeger)
+            {
+                Console.WriteLine("Girilen değer hatalı.\nBir seçenek seçip ilerleyin!");
+                goto step1;
+            }
+            #endregion
 
             ////  @@@@@      |||        @@@@    Bu bölüm de ilerleyen derslerden sonra bir designpattern ile refactoring edilmeli.
             switch (selectedId)
             {
                 case 0:
-                    Console.WriteLine("Hatalı seçim.\nBir seçenek seçip ilerleyin!");
-                    Main(args);
-                    return;
+                    Environment.Exit(0);
+                    break;
+                    //Console.WriteLine("Hatalı seçim.\nBir seçenek seçip ilerleyin!");
+                    //Main(args);
+                    //return;
                 case 1:
                     /////       Singleton
                     ///  Sadece tek bir objenin tekrar tekrar kullanılacağı durumlarda(örn;logger, bidirimler gibi) kullanılıyor.
@@ -64,12 +75,17 @@ namespace App1 {
                     obj.Yemek();
                     Console.WriteLine("");
                     ///
+
+
+
                     Console.WriteLine("-------- Super Class with Sub Class----");
                     ClassAile obj2 = new ClassBirey("Yusuf","Çocuk");
                     obj2.Soyisim = "Taha";
                     obj2.Yemek();
                     Console.WriteLine("");
                     ///
+
+
                     Console.WriteLine("-------- Super Clas ----");
                     ClassBirey obj3 = new ClassBirey("Cemal","Baba");
                     obj3.Soyisim = "Taha";
@@ -91,7 +107,9 @@ namespace App1 {
 
             Console.WriteLine("\n\r");
             Console.WriteLine("Programı kapatmak için Escape tuşuna basın.");
-            ConsoleKeyInfo escExpect=Console.ReadKey();
+            Console.WriteLine("\n\r");
+
+            ConsoleKeyInfo escExpect =Console.ReadKey();
             if (escExpect.Key != ConsoleKey.Escape)
             {
                 Main(args);
@@ -101,6 +119,10 @@ namespace App1 {
             }
                 //Console.ReadLine();
             //Console.ReadLine();
+        }
+        void ExitApp()
+        {
+            Environment.Exit(0);
         }
     }
 }
