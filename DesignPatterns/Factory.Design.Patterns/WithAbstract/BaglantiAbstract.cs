@@ -13,11 +13,15 @@ namespace Factory.Design.Patterns.Base.WithAbstract
         ///     - abstract base içinde "Virtual" methodlar yazılabilir (Diğer methodlarda yazılabilir tabi) bu virtual methodlar
         ///     inherit olan (yani miras alınan) Class'lar içinde override edilebilir.
         ///     Interface içinde method yazamazsın, methodları belirlersin.
+        ///     
+        ///     Interface'den farkı anlatmak için fazladan bir method açtım.
         /// </summary>
-        /*public virtual void BaglantiKuruluncaMesajVer()
+        /// 
+
+        public virtual void BaglantiKuruluncaMesajVer()
         {
-            Console.WriteLine("Bağlantı kuruldu");
-        }*/
+            Console.WriteLine("Bağlantı başarıyla kuruldu");
+        }
     }
 
 }
