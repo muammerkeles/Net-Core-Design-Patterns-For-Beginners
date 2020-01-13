@@ -10,6 +10,9 @@ using Factory.Design.Patterns.Base.WithAbstract;
 using Factory.Design.Patterns.Base.WithInterface;
 #endregion factoryDesignPattern_Interface
 
+#region factoryDesignPattern_Interface___ HESAPLAMA_ORNEGI
+using Factory.Design.Patterns.WithInterfaceCalculatorExample;
+#endregion factoryDesignPattern_Interface
 
 using Singleton.Design.Pattern.Sample.Static;
 using Super.Sub.Classes;
@@ -19,13 +22,15 @@ namespace App1 {
     class Program {
         static void Main(string[] args)
         {
+            Console.WriteLine("");
             #region ProgramVariants
             string[] qsn = {
                 "0-Programdan Çık",
                 "1-Sigleton Design Pattern",
                 "2-Concept Model",
                 "3-Supper Class",
-                "4-Factory Design Pattern"
+                "4-Factory Design Pattern",
+                "5-Factory Design Pattern (Başka bir örnek : Hesaplama)"
             };
             for( int i=1;i<=qsn.Length;i++)
             {
@@ -37,7 +42,8 @@ namespace App1 {
             bool girilenDeger=double.TryParse(chosen,out selectedId);
             if (!girilenDeger)
             {
-                Console.WriteLine("Girilen değer hatalı.\nBir seçenek seçip ilerleyin!");
+                Console.WriteLine("Girilen değer hatalı.\nBir seçenek seçip ilerleyin!\n");
+                
                 goto step1;
             }
             #endregion
@@ -119,23 +125,38 @@ namespace App1 {
 
                 #region FactoryDesign
                 case 4:
-                    //abstract örneği
-                    BaglantiCreator baglantiFabrikasi = new BaglantiCreator();
-                    //var ggg = new AbstractFactory();
+                    //abstract factory için Örnek1
+                    BaglantiCreator baglantiFabrikasi = new BaglantiCreator();                    
                     BaglantiAbstract mmongoDb_abstract_inherit = baglantiFabrikasi.FactoryMethodum(Baglantilar.MongoDb);
                     mmongoDb_abstract_inherit.BaglantiKur();
 
-                    //interface kullanım örneği
+                    //interface kullanım ile ÖRnek1
                     IBaglanti mysql_interface = new MySqlIF();
                     mysql_interface.BaglantiKur();
-
+                    //interface kullanım ile Örnek1
                     IBaglanti oracle_interface = new OracleIF();
                     oracle_interface.BaglantiKur();
+                    Console.WriteLine("\n\n");
 
                     break;
+
                 #endregion FactoryDesign
 
+                #region MoreFactoryDesign
+                case 5:
+                    ////            Interface + factory pattern ile Örnek2 |  Hesaplama / dört işlem)
+                    Console.WriteLine("Hesaplama yapmak için aşağıdaki değerlerden bir tanesini girin.\n\n1:Topla işlemi \n2:Cikarma işlemi \n3:Bölme işlemi \n4:Çarpma işlemi ");
 
+                    DortIslem diEnum;
+                    var girilen = Enum.TryParse<DortIslem>(Console.ReadLine(), out diEnum);
+                    IHesaplayıcı hesaplama = new HesaplamaFactory().HesaplayiciFactoryMethod(diEnum);
+                    Console.WriteLine("Şimdi Birinci Değeri Girin::");
+                    var deger1 = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Şimdi İkinci Değeri Girin::");
+                    var deger2 = Convert.ToDouble(Console.ReadLine());
+                    hesaplama.Hesapla(deger1, deger2);
+                    break;
+                #endregion MoreFactoryDesign
                 default:
                     Console.WriteLine("Hatalı seçim.\nBir seçenek seçip ilerleyin!");
                     Console.ReadLine();
