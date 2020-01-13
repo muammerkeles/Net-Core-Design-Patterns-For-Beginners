@@ -4,12 +4,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="AbstractFactory.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="AbstractFactory.cs" />
-  </ItemGroup>
-
 </Project>

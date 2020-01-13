@@ -1,7 +1,16 @@
 ﻿using ModelConcept.Sample.Person;
 using ModelConcept.Sample.Person.Interface;
 using Singleton.Design.Pattern;
- 
+using Factory.Design.Patterns;
+#region factoryDesignPattern_Abstract
+using Factory.Design.Patterns.Base.WithAbstract;
+#endregion factoryDesignPattern_Abstract
+
+#region factoryDesignPattern_Interface
+using Factory.Design.Patterns.Base.WithInterface;
+#endregion factoryDesignPattern_Interface
+
+
 using Singleton.Design.Pattern.Sample.Static;
 using Super.Sub.Classes;
 using System;
@@ -12,11 +21,11 @@ namespace App1 {
         {
             #region ProgramVariants
             string[] qsn = {
-                "Programdan Çık",
-                "Sigleton Design Pattern",
-                "Concept Model",
-                "Supper Class",
-                "Factory Design Pattern"
+                "0-Programdan Çık",
+                "1-Sigleton Design Pattern",
+                "2-Concept Model",
+                "3-Supper Class",
+                "4-Factory Design Pattern"
             };
             for( int i=1;i<=qsn.Length;i++)
             {
@@ -33,15 +42,23 @@ namespace App1 {
             }
             #endregion
 
-            ////  @@@@@      |||        @@@@    Bu bölüm de ilerleyen derslerden sonra bir designpattern ile refactoring edilmeli.
+            ////  Bu bölüm de, ilerleyen derslerde bir "Design Pattern" örneği ile refactoring ediliebilir!
+
+
+
             switch (selectedId)
             {
+                #region ExitCase
                 case 0:
                     Environment.Exit(0);
                     break;
-                    //Console.WriteLine("Hatalı seçim.\nBir seçenek seçip ilerleyin!");
-                    //Main(args);
-                    //return;
+                //Console.WriteLine("Hatalı seçim.\nBir seçenek seçip ilerleyin!");
+                //Main(args);
+                //return;
+                #endregion ExitCase
+
+                #region SingleTon
+
                 case 1:
                     /////       Singleton
                     ///  Sadece tek bir objenin tekrar tekrar kullanılacağı durumlarda(örn;logger, bidirimler gibi) kullanılıyor.
@@ -53,7 +70,9 @@ namespace App1 {
                     /////////           instance kodlarının aynı olduğunu görebiliriz.
                     ///
                     break;
+                #endregion SingleTon
 
+                #region ConceptModel 
 
                 case 2:
                     // Örnek  
@@ -67,6 +86,10 @@ namespace App1 {
                     Console.WriteLine("Bu işlemin Hash Kodu'si : {0}\n{1}\n", eg2.GetHashCode(), "-----------------");
 
                     break;
+
+                #endregion ConceptModel
+
+                #region superClass
                 case 3:
                     /////       Superclass
                     Console.WriteLine("-------- Super Clas ----");
@@ -91,19 +114,34 @@ namespace App1 {
                     obj3.Soyisim = "Taha";
                     obj3.Yemek();
                     break;
+                #endregion superClass
+
+
+                #region FactoryDesign
+                case 4:
+                    //abstract örneği
+                    BaglantiCreator baglantiFabrikasi = new BaglantiCreator();
+                    //var ggg = new AbstractFactory();
+                    BaglantiAbstract mmongoDb_abstract_inherit = baglantiFabrikasi.FactoryMethodum(Baglantilar.MongoDb);
+                    mmongoDb_abstract_inherit.BaglantiKur();
+
+                    //interface kullanım örneği
+                    IBaglanti mysql_interface = new MySqlIF();
+                    mysql_interface.BaglantiKur();
+
+                    IBaglanti oracle_interface = new OracleIF();
+                    oracle_interface.BaglantiKur();
+
+                    break;
+                #endregion FactoryDesign
+
+
                 default:
                     Console.WriteLine("Hatalı seçim.\nBir seçenek seçip ilerleyin!");
                     Console.ReadLine();
                     //Main(args);
                     break;
             }
-
-
-
-
-
-
-
 
             Console.WriteLine("\n\r");
             Console.WriteLine("Programı kapatmak için Escape tuşuna basın.");
