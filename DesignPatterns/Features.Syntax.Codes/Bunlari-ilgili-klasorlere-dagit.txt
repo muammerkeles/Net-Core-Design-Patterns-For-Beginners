@@ -1,0 +1,27 @@
+﻿https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8
+buradaki featureları da bu proeye örneklerle ekle.
+recursive swicth expression gibi....
+
+
+
+Readonly members
+You can apply the readonly modifier to members of a struct. It indicates that the member doesn't modify state. It's more granular than applying the readonly modifier to a struct declaration. Consider the following mutable struct:
+
+C#
+
+Copy
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+
+
+
