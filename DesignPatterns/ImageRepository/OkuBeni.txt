@@ -1,0 +1,2 @@
+﻿Bu rpojenin kaynak kodlarının kaynağı aşağıdaki adrestir.
+https://dejanstojanovic.net/aspnet/2019/march/managing-images-on-filesystem-using-repository-pattern-in-net-core/
