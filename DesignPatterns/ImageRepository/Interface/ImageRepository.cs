@@ -27,7 +27,7 @@ namespace ImageRepository.Interface
             this.removeImages = new List<ImageModel>();
 
             this.configuration = configuration;
-            this.folderPath = configuration.GetValue<String>("Images:Folder");
+            //this.folderPath = configuration.GetValue<String>("Images:Folder");
             if (String.IsNullOrWhiteSpace(this.folderPath))
             {
                 throw new Exception("Dizin belirlenmemiş!");

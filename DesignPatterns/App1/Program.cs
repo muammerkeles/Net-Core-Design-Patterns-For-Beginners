@@ -17,6 +17,8 @@ using Factory.Design.Patterns.WithInterfaceCalculatorExample;
 using Singleton.Design.Pattern.Sample.Static;
 using Super.Sub.Classes;
 using System;
+using Service.Locator.Pattern;
+using Service.Locator.Pattern.Demo.Services;
 
 namespace App1 {
     class Program {
@@ -30,7 +32,8 @@ namespace App1 {
                 "2-Concept Model",
                 "3-Supper Class",
                 "4-Factory Design Pattern",
-                "5-Factory Design Pattern (Başka bir örnek : Hesaplama)"
+                "5-Factory Design Pattern (Başka bir örnek : Hesaplama)",
+                "6-Service Locator Pattern "
             };
             for( int i=1;i<=qsn.Length;i++)
             {
@@ -157,6 +160,17 @@ namespace App1 {
                     hesaplama.Hesapla(deger1, deger2);
                     break;
                 #endregion MoreFactoryDesign
+
+                #region ServiceLocator
+                case 6:
+                    //loc => locator => bulan, bulucu!
+                    IServiceLocator loc = new ServiceLocator();
+                    IServiceB servisa = loc.GetService<IServiceB>();
+                    Console.WriteLine($"Servis cevabı : {servisa.GetName()}");
+                    break;
+                #endregion ServiceLocator
+
+
                 default:
                     Console.WriteLine("Hatalı seçim.\nBir seçenek seçip ilerleyin!");
                     Console.ReadLine();

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Factory.Design.Patterns\Factory.Design.Patterns.csproj" />
     <ProjectReference Include="..\ModelConcept\Model.Concept.Pattern.csproj" />
+    <ProjectReference Include="..\Service.Locator.Pattern\Service.Locator.Pattern.csproj" />
     <ProjectReference Include="..\Singleton.Design.Pattern\Singleton.Design.Pattern.csproj" />
     <ProjectReference Include="..\SuperClass\Super.Sub.Classes.csproj" />
   </ItemGroup>
