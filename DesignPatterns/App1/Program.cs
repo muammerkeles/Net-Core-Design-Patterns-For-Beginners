@@ -19,6 +19,8 @@ using Super.Sub.Classes;
 using System;
 using Service.Locator.Pattern;
 using Service.Locator.Pattern.Demo.Services;
+using Builder.Design.Pattern;
+using System.Collections.Generic;
 
 namespace App1 {
     class Program {
@@ -33,7 +35,9 @@ namespace App1 {
                 "3-Supper Class",
                 "4-Factory Design Pattern",
                 "5-Factory Design Pattern (Başka bir örnek : Hesaplama)",
-                "6-Service Locator Pattern "
+                "6-Service Locator Pattern ",
+                "7-Builder Design Pattern"
+
             };
             for( int i=1;i<=qsn.Length;i++)
             {
@@ -171,6 +175,24 @@ namespace App1 {
                 #endregion ServiceLocator
 
 
+                #region  BuilderPattern
+                case 7:
+                    /// kaynak : https://code-maze.com/builder-design-pattern/
+                    var product = new List<Product>
+                    {
+                        new Product{Name="Monitor",Price=200.50},
+                        new Product{Name="Mouse",Price=20.41},
+                        new Product{Name="Keyboard",Price=30.15}
+                    };
+                    var builder = new ProductStockReportBuilder(product);
+                    var director = new ProductStockReportDirector(builder);
+                    director.BuildStockReport();
+
+                    var report = builder.GetReport();
+                    Console.WriteLine(report);
+
+                    break;
+                #endregion BuilderPattern
                 default:
                     Console.WriteLine("Hatalı seçim.\nBir seçenek seçip ilerleyin!");
                     Console.ReadLine();
