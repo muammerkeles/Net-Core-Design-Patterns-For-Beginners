@@ -50,8 +50,8 @@ Yeni başlayanlar için örneklerle "Design Patterns" tasarım kalıpları/desen
 ```
 Ek
 ```
-- Model.Concepts
- - Supper Class & Sub Class & Inheritance (Miras/devralma) & Derivation (devired/türetme/türetilen)
+- Model.Concepts       `done`
+ - Supper Class & Sub Class & Inheritance (Miras/devralma) & Derivation (devired/türetme/türetilen)    `done`
 
 
 
