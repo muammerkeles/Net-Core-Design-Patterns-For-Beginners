@@ -20,6 +20,7 @@ Yeni başlayanlar için örneklerle "Design Patterns" tasarım kalıpları/desen
  - Builder            `done`
  - Prototype          
  - Singleton          `done`
+ 
  ``
   Structural Patterns
  ``
@@ -30,6 +31,7 @@ Yeni başlayanlar için örneklerle "Design Patterns" tasarım kalıpları/desen
  - Façade
  - Flyweight
  - Proxy 
+ 
  ``
  Behavioral Patterns
  ``
@@ -44,6 +46,7 @@ Yeni başlayanlar için örneklerle "Design Patterns" tasarım kalıpları/desen
  - Strategy
  - Visitor
  - Template Method
+ 
 ```
 Ek
 ```
