@@ -1,25 +1,57 @@
 # Net-Core-Design-Patterns-For-Beginners
-Yeni başlayanlar için örneklerle "Design Patterns" tasarım kalıpları/desenleri
+Yeni baÅŸlayanlar iÃ§in Ã¶rneklerle "Design Patterns" tasarÄ±m kalÄ±plarÄ±/desenleri
 ## Nedir ?
   // geliyor..
  
-## Başlıklar
- - Console Uygulaması ile bütün konuları örneklerle deneyimleme
- - Virtualization (Sanallaştırma)
+## BaÅŸlÄ±klar
+ - Console UygulamasÄ± ile bÃ¼tÃ¼n konularÄ± Ã¶rneklerle deneyimleme
+ - Virtualization (SanallaÅŸtÄ±rma)
  - Abstraction (Soyutlama)
  
-## İşlenen (İşlenilecek olan) Design Patterns
+## Ä°ÅŸlenen (Ä°ÅŸlenilecek olan) Design Patterns
  ```
- Gang of four / dörtlü çete diye anılan en çok kullanılan/gerek duyulan  dört ana "Design Patterns"  
+ Gang of four / dÃ¶rtlÃ¼ Ã§ete diye anÄ±lan en Ã§ok kullanÄ±lan/gerek duyulan  dÃ¶rt ana "Design Patterns"  
  ```
- - Singleton.Design.Pattern 
- - Model.Concepts
- - Supper Class & Sub Class & Inheritance (Miras/devralma) & Derivation (devired/türetme/türetilen)
- - Factory Pattern
- - - Factory Method
- - - Abstract Factory
+  ``
+  Creational Patterns
+  ``
+ - Abstract Factory   `done`
+ - Factory Method     `done`
+ - Builder            `done`
+ - Prototype          
+ - Singleton          `done`
+ ``
+  Structural Patterns
+ ``
+ - Adapter
+ - Bridge
+ - Composite
+ - Decorator
+ - FaÃ§ade
+ - Flyweight
+ - Proxy 
+ ``
+ Behavioral Patterns
+ ``
+ - Chain of Responsibility
+ - Command
+ - Interpreter
+ - Iterator
+ - Mediator
+ - Memento
+ - Observer
+ - State
+ - Strategy
+ - Visitor
+ - Template Method
+```
+Ek
+```
+- Model.Concepts
+ - Supper Class & Sub Class & Inheritance (Miras/devralma) & Derivation (devired/tÃ¼retme/tÃ¼retilen)
 
 
- ## Faydalandığım Kaynaklar?
+
+ ## FaydalandÄ±ÄŸÄ±m Kaynaklar?
    - [geliyor](https://)
  
